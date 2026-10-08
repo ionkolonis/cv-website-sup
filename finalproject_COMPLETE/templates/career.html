@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    CV
+{% endblock %}
+
+{% block body %}
+
+            <div class="centeredtitletext">CV (As of 24/08/2026)</div>
+
+            <!-- work volunteer section -->
+            <div class="centeredbodytext" style="text-decoration: underline; font-weight: bold;">Work-Volunteer Experience</div>
+
+            <div class="centeredbodytext cvlist"><a href="https://www.ila-hq.org/en_GB" class="hyperlink">International Law Association</a>, London, England: Part-time Employment, redesign and development of the company website.</div>
+            <div class="centeredbodytext cvlist"><a href="https://convertgroup.com/" class="hyperlink">Convert Group</a>, Athens, Greece: Worked alongside and assisted Founder & CEOs, partook in company meetings.</div>
+            <div class="centeredbodytext cvlist"><a href="https://dexternavigation.com/" class="hyperlink">Dexter Navigation LTD</a>, Piraeus, Greece: Assisted Chief Marine Engineer and Commercial Manager, partook in company meetings.</div>
+            <div class="centeredbodytext cvlist">Volunteering at the <a href="https://www.athensauthenticmarathon.gr/en" class="hyperlink">Authentic Athens Marathon LTD</a>, Athens, Greece: Posted to a Water/Rest station, supported athletes, distributed water bottles.</div>
+
+            <!-- extracurricular activities section -->
+            <div class="centeredbodytext" style="text-decoration: underline; font-weight: bold;">Extracurricular activities / Awards</div>
+
+            <div class="centeredbodytext cvlist">Ownership of an online profitable Game Development asset marketplace, amassing over <span class="centeredbodytext cvlist" style="color: red;">220 sales</span> across all platforms.</div>
+            <div class="centeredbodytext cvlist">Ownership of social media account focused on the aviation and video editing niche, peaking at <span class="centeredbodytext cvlist" style="color: red;">3,000 followers</span>.</div>
+            <div class="centeredbodytext cvlist">The Associated Board of the Royal Schools of Music <span class="centeredbodytext cvlist" style="color: red;">Grade 3 Piano certification (with Merit)</span>.</div>
+            <div class="centeredbodytext cvlist"> <span class="centeredbodytext cvlist" style="color: red;">Third Place</span> in the 2026 Anatolia College Science and Technology Annual Conference "Day of AI Hackathon".</div>
+
+            <!-- languages computer knowledge section-->
+            <div class="centeredbodytext" style="text-decoration: underline; font-weight: bold;">Languages-Computer Knowledge</div>
+
+            <table class="langtable">
+                <tr>
+                    <td>Greek:</td>
+                    <td>Native</td>
+                </tr>
+
+                <tr>
+                    <td>English:</td>
+                    <td>Native, CPE, Grade A, November 2024</td>
+                </tr>
+
+                <tr>
+                    <td>French:</td>
+                    <td>Strong Knowledge, DELF, Level B2, December 2024</td>
+                </tr>
+            </table>
+
+            <table class="langtable">
+                <tr>
+                    <td rowspan="2">Python:</td>
+                    <td>Strong Knowledge, <span class="centeredbodytext cvlist" style="color: red;">MIT</span> Beaver Works Summer Institute "Prerequisite Course Python Core 2025",</td>
+                </tr>
+                <tr class="subrow">
+                    <td><a href="https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science" class="hyperlink">HarvardX "CS50's Introduction to Computer Science"</a> (PENDING COMPLETION)</td>
+                </tr>
+
+                <tr>
+                    <td>C:</td>
+                    <td>Strong Knowledge, HarvardX "CS50's Introduction to Computer Science"</td>
+                </tr>
+
+                <tr>
+                    <td>HTML/CSS/Javascript:</td>
+                    <td>Strong Knowledge, HarvardX "CS50's Introduction to Computer Science"</td>
+                </tr>
+            </table>
+
+            <div class="centeredbodytext" style="text-decoration: underline; font-weight: bold; margin-bottom: 10px;">! IMPORTANT NOTICE !</div>
+            <div class="centeredbodytext" style="margin-top: 10px;">For official purposes, please <a href="{{ url_for('contactme') }}" class="hyperlink">contact me</a> for the latest, most detailed edition of my CV.</div>
+
+
+{% endblock %}

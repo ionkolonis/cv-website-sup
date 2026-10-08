@@ -1,0 +1,412 @@
+/* import logo font */
+@font-face {
+    font-family: 'Futura Heavy Oblique';
+    src: url('fonts/Futura Heavy Oblique.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* ---------------------------------- */
+/* timestamp properties */
+#timestamp {
+    font-family: monospace;
+    font-weight: 100;
+    text-align: center;
+}
+
+/* ---------------------------------- */
+/* main body and title text used through all website pages */
+
+.centeredbodytext {
+    font-family: monospace;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    font-size: 12px;
+    margin-top: 50px;
+    max-width: 550px;
+}
+
+.centeredtitletext {
+    font-family: monospace;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    font-size: 15px;
+    margin-top: 40px;
+    max-width: 350px;
+}
+
+/* ---------------------------------- */
+/* namebox properties */
+.namebox {
+    background-color: #ED1C24;
+    color: white;
+
+    font-family: 'Futura Heavy Oblique', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 32px;
+
+    line-height: 1;
+    padding: 8px 4px;
+    width: fit-content;
+
+    margin-top: 80px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: block;
+    text-decoration: none;
+}
+
+/* ---------------------------------- */
+/* homepage menu styling */
+.homemenu {
+    font-family: monospace;
+}
+
+.menu-button {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 15px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: black;
+    font: 12px monospace;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    background-color: red;
+    color: white;
+}
+
+/* ---------------------------------- */
+/* properties applied for all hyperlinks in the website */
+.hyperlink {
+    color: red;
+    text-decoration: none;
+}
+
+.hyperlink:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------------- */
+/* bootstrap carousel properties */
+.carouselstyling {
+    width: 500px;
+    max-width: calc(100% - 32px);
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* ---------------------------------- */
+/* footer properties */
+footer {
+    font-family: monospace;
+    font-weight: 100;
+    font-size: 8px;
+
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+
+    text-align: center;
+}
+
+/* --------------- */
+/* footer menu with admin login and form submission option */
+.footer-menu {
+    margin-top: 10px;
+}
+
+.footer-menu .menu-button {
+    margin-bottom: 6px;
+    font-size: 8px;
+}
+
+/* CV page specific properties */
+.cvlist {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.langtable {
+    font-family: monospace;
+    font-size: 12px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+
+    border-collapse: collapse;
+}
+
+.langtable td {
+    padding: 2px 15px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.langtable .subrow td {
+    border-top: none;
+}
+
+/* --------------------------------------------------------------------------- */
+/* CONTACT FORM / RETRO POPUPS STYLISATION */
+/* AI WAS USED FOR THESE PROPERTIES, IN ORDER TO MATCH A VERY SPECIFIC AESTHETIC */
+
+.contact-form-inner {
+    width: 560px;
+    zoom: 0.6363636364;
+    margin: 0 auto;
+}
+
+.contact-window {
+    width: 550px;
+    margin: 24px 5px 6px;
+}
+
+/* Shared vintage window */
+.retro-window {
+    box-sizing: border-box;
+    padding: 4px;
+
+    color: #111;
+    background: #f7f7f7;
+    font-family: monospace;
+    font-size: 12px;
+
+    border: 2px solid;
+    border-color: #ffffff #424242 #424242 #ffffff;
+
+    box-shadow:
+        inset 1px 1px 0 #dfdfdf,
+        inset -1px -1px 0 #858585,
+        0 0 0 1px #b5b5b5,
+        2px 2px 0 #222;
+}
+
+/* Red window titlebar */
+.retro-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    min-height: 34px;
+    padding: 5px 7px;
+
+    background: #ED1C24;
+    color: white;
+}
+
+.retro-titlebar h2 {
+    margin: 0;
+    font: inherit;
+    font-weight: bold;
+}
+
+/* Window controls in the top-right */
+.retro-window-controls {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* Raised close, resize, and trash buttons */
+.retro-close {
+    display: grid;
+    place-items: center;
+    flex: 0 0 23px;
+
+    width: 23px;
+    height: 23px;
+    padding: 0;
+
+    border: 2px solid;
+    border-color: #ffffff #353535 #353535 #ffffff;
+    border-radius: 0;
+
+    background: #e8e8e8;
+    color: #111;
+    box-shadow: inset -1px -1px 0 #999;
+    cursor: pointer;
+}
+
+.retro-close span {
+    font-family: Consolas, "Liberation Mono", monospace;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+.retro-close:hover {
+    background: #ffffff;
+}
+
+/* Window interior */
+.retro-content {
+    padding: 18px;
+}
+
+.retro-form {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+}
+
+/* Contact form fields */
+.retro-field {
+    display: block;
+    box-sizing: border-box;
+
+    width: 100%;
+    min-width: 0;
+    padding: 11px 12px;
+
+    border: 2px solid;
+    border-color: #858585 #ffffff #ffffff #858585;
+    border-radius: 0;
+    box-shadow: inset 1px 1px 0 #d6d6d6;
+
+    background: #ffffff;
+    color: #111;
+    font: inherit;
+}
+
+textarea.retro-field {
+    min-height: 145px;
+    resize: vertical;
+}
+
+/* Full-width submit button */
+.retro-button {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+
+    border: 2px solid;
+    border-color: #ffffff #454545 #454545 #ffffff;
+    border-radius: 0;
+    box-shadow: inset -1px -1px 0 #b5b5b5;
+
+    background: #ededed;
+    color: #111;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Submission list */
+.retro-submissions {
+    width: min(550px, calc(100% - 34px));
+    margin: 35px auto;
+
+    display: grid;
+    gap: 24px;
+}
+
+.retro-details {
+    display: grid;
+    gap: 10px;
+    margin: 0 0 16px;
+}
+
+.retro-details > div {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 10px;
+}
+
+.retro-details dt {
+    font-weight: normal;
+    color: #666;
+}
+
+.retro-details dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.retro-message {
+    padding: 12px;
+
+    border: 2px solid;
+    border-color: #858585 #ffffff #ffffff #858585;
+    box-shadow: inset 1px 1px 0 #d6d6d6;
+
+    background: #ffffff;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* Submission trash control */
+.retro-delete-control {
+    display: flex;
+    flex-shrink: 0;
+    margin: 0 0 0 auto;
+}
+
+.retro-trash svg {
+    display: block;
+}
+
+.retro-empty {
+    margin: 0;
+}
+
+/* Admin login and feedback messages */
+.form-panel,
+.notice {
+    width: min(550px, calc(100% - 32px));
+    margin: 35px auto;
+    font: 12px monospace;
+}
+
+.form-panel {
+    display: grid;
+    gap: 12px;
+    padding: 24px;
+    border: 1px solid #ddd;
+}
+
+.form-panel input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 0;
+    font: inherit;
+}
+
+.form-panel button {
+    padding: 10px 16px;
+    border: 0;
+    background: #ED1C24;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* form submitted / submission deleted popup styling */
+.notice {
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #ED1C24;
+}
+
+/* AI CITATION ENDS HERE (APPROX. 230 LINES) */
+/* --------------------------------------------------------------------------- */

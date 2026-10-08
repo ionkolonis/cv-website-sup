@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Form submissions
+{% endblock %}
+
+{% block body %}
+    <h1 class="centeredtitletext">Contact form submissions</h1>
+
+    <div class="retro-submissions">
+        {% for submission in submissions %}
+            <article class="retro-window" aria-labelledby="submission-title-{{ submission.id }}">
+
+                <div class="retro-titlebar">
+                    <h2 id="submission-title-{{ submission.id }}"> submission #{{ submission.id }}</h2>
+
+                    <form class="retro-delete-control" method="post" action="{{ url_for('delete_submission', submission_id=submission.id) }}">
+
+                        <button class="retro-close retro-trash" type="submit" aria-label="Delete submission {{ submission.id }}" title="Delete submission">
+
+                            <!-- trash icon made with help of AI -->
+                            <svg
+                                width="14"
+                                height="14"
+                                viewBox="0 0 16 16"
+                                fill="currentColor"
+                                shape-rendering="crispEdges"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="
+                                    M6 1h4v2H6z
+                                    M3 3h10v2H3z
+                                    M4 6h2v7h4V6h2v9H4z
+                                    M7 6h2v6H7z
+                                "/>
+                            </svg>
+                            <!-- end -->
+
+                        </button>
+                    </form>
+                </div>
+
+                <div class="retro-content">
+                    <dl class="retro-details">
+                        <div>
+                            <dt>name</dt>
+                            <dd>{{ submission.name }}</dd>
+                        </div>
+
+                        <div>
+                            <dt>email</dt>
+                            <dd>{{ submission.email or 'Not provided' }}</dd>
+                        </div>
+
+                        <div>
+                            <dt>received</dt>
+                            <dd>{{ submission.created_at }} UTC</dd>
+                        </div>
+                    </dl>
+
+                    <div class="retro-message">{{ submission.content }}</div>
+                </div>
+            </article>
+        {% else %}
+            <section class="retro-window">
+                <div class="retro-titlebar">
+                    <h2>form submissions</h2>
+                </div>
+
+                <div class="retro-content">
+                    <p class="retro-empty">No submissions yet.</p>
+                </div>
+            </section>
+        {% endfor %}
+    </div>
+{% endblock %}

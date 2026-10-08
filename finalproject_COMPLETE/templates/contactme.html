@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    contact me
+{% endblock %}
+
+{% block body %}
+    <div class="centeredtitletext">Contact me</div>
+
+    <div class="centeredbodytext"
+        style="margin-top: 50px; max-width: 350px;">
+        If you like what you're seeing (or don't), or want to contact me
+        for any reason at all, do not hesitate to use any of the methods
+        below! If you could, please be mindful of my timezone (in that
+        fancy header you see at the top of the page) and I will do my
+        best to answer ASAP!
+    </div>
+
+    <div class="homemenu" style="margin-top: 80px;">
+        <a class="menu-button" href="mailto:ionkolonis@gmail.com" target="_blank" rel="noopener noreferrer">
+            email
+        </a>
+
+        <a class="menu-button" href="https://mail.google.com/mail/?view=cm&fs=1&to=ionkolonis@gmail.com" target="_blank" rel="noopener noreferrer">
+            gmail (specifically)
+        </a>
+
+        <a class="menu-button" href="https://www.instagram.com/ion.klns/">
+            @ion.klns (ig)
+        </a>
+
+        <button type="button" class="menu-button contact-form-toggle" aria-expanded="false" aria-controls="contact-form-panel">
+            contact form
+        </button>
+    </div>
+
+    <!-- Mild use of AI for help with the retro contact form popup -->
+    <div id="contact-form-panel" hidden>
+        <div class="contact-form-inner">
+            <section class="retro-window contact-window" aria-labelledby="contact-window-title">
+
+                <div class="retro-titlebar">
+                    <h2 id="contact-window-title">contact form</h2>
+
+                    <div class="retro-window-controls">
+                        <button type="button" class="retro-close" id="contact-close" aria-label="Close contact form">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                </div>
+
+                <form class="retro-content retro-form" method="post" action="{{ url_for('contactme') }}">
+
+
+                    <label class="visually-hidden" for="name">
+                        Name (required)
+                    </label>
+                    <input class="retro-field" id="name" name="name" autocomplete="name" placeholder="name (required)" required value="{{ request.form.get('name', '') }}">
+
+                    <label class="visually-hidden" for="email">
+                        Email (optional)
+                    </label>
+                    <input class="retro-field" id="email" name="email" type="email" placeholder="email (optional)" value="{{ request.form.get('email', '') }}">
+
+                    <label class="visually-hidden" for="content">
+                        Message (required)
+                    </label>
+                    <textarea class="retro-field" id="content" name="content" rows="7" maxlength="10000" placeholder="your message (required)" required>{{ request.form.get('content', '') }}</textarea>
+
+                    <button class="retro-button" type="submit">
+                        submit
+                    </button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const contactToggle = document.querySelector(".contact-form-toggle");
+        const contactPanel = document.getElementById("contact-form-panel");
+        const contactClose = document.getElementById("contact-close");
+
+        function setContactFormOpen(open) {
+            if (!open && contactPanel.contains(document.activeElement)) {
+                contactToggle.focus();
+            }
+
+            contactToggle.setAttribute("aria-expanded", String(open));
+            contactPanel.hidden = !open;
+        }
+
+        contactToggle.addEventListener("click", () => {
+            const isOpen =
+                contactToggle.getAttribute("aria-expanded") === "true";
+
+            setContactFormOpen(!isOpen);
+        });
+
+        contactClose.addEventListener("click", () => {
+            setContactFormOpen(false);
+        });
+
+        contactPanel.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                setContactFormOpen(false);
+            }
+        });
+
+    </script>
+{% endblock %}
