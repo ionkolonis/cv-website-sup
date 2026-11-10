@@ -23,8 +23,9 @@
         <link rel="icon" type="image/png" href="/static/header_icon.png">
     </head>
     <body>
-        <a href="/" class="namebox" data-background-folder="/static/bogos/">Ionas Kolonis</a>
-        <script src="/static/logos.js"></script>
+        <a href="/" class="namebox" style="visibility:hidden" data-background-folder="/static/bogos/">Ionas Kolonis</a>
+        <script src="/static/logos.js" onerror="document.querySelector('.namebox').style.visibility='visible'"></script>
+<noscript><style>.namebox { visibility: visible !important; }</style></noscript>
         <div id="timestamp"></div>
         <main>
             <p id="notice" class="notice" role="status" hidden></p>
