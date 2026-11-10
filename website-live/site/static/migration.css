@@ -1,0 +1,8 @@
+/* Keep hidden controls hidden even if a component assigns display:block. */
+[hidden] { display: none !important; }
+/* Keep submission headings within narrow windows. */
+.retro-titlebar h2 { min-width: 0; overflow-wrap: anywhere; }
+
+.socials-established { margin-top: 6px; }
+.socials-heading { margin-top: 24px; }
+.socials-links { margin-top: 50px; }
