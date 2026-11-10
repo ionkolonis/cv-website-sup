@@ -57,11 +57,12 @@
 
         <button type="button" class="menu-button contact-form-toggle" aria-expanded="false" aria-controls="contact-form-panel">
             contact form
+            <span class="contact-form-arrow" aria-hidden="true"></span>
         </button>
     </div>
 
     <!-- Mild use of AI for help with the retro contact form popup -->
-    <div id="contact-form-panel" hidden>
+    <div id="contact-form-panel" class="contact-form-panel" inert>
         <div class="contact-form-inner">
             <section class="retro-window contact-window" aria-labelledby="contact-window-title">
 
@@ -113,7 +114,8 @@
             }
 
             contactToggle.setAttribute("aria-expanded", String(open));
-            contactPanel.hidden = !open;
+            contactPanel.inert = !open;
+            contactPanel.classList.toggle("is-open", open);
         }
 
         contactToggle.addEventListener("click", () => {

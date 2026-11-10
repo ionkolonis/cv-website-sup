@@ -413,3 +413,59 @@ textarea.retro-field {
 
 /* AI CITATION ENDS HERE (APPROX. 230 LINES) */
 /* --------------------------------------------------------------------------- */
+
+.contact-form-toggle {
+    position: relative;
+}
+
+/* Equilateral triangle; positioned outside the centered text. */
+.contact-form-arrow {
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 50%;
+    width: 8px;
+    height: 9.24px;
+    background-color: black;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 260ms ease;
+}
+
+.contact-form-toggle[aria-expanded="true"] .contact-form-arrow {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+/* Animate between collapsed and the form's natural height. */
+.contact-form-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        grid-template-rows 300ms ease,
+        opacity 220ms ease,
+        visibility 0s linear 300ms;
+}
+
+.contact-form-panel.is-open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+    transition:
+        grid-template-rows 300ms ease,
+        opacity 220ms ease,
+        visibility 0s;
+}
+
+.contact-form-inner {
+    min-height: 0;
+    overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-form-arrow,
+    .contact-form-panel,
+    .contact-form-panel.is-open {
+        transition: none;
+    }
+}
